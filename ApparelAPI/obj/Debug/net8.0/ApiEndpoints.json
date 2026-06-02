@@ -1,0 +1,219 @@
+[
+  {
+    "ContainingType": "ApparelAPI.Controllers.Compras",
+    "Method": "InsertarCompra",
+    "RelativePath": "api/Compras/InsertarCompra",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compra",
+        "Type": "CapaEntidades.Compras",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApparelAPI.Controllers.Compras",
+    "Method": "InsertarDetalleCompra",
+    "RelativePath": "api/Compras/InsertarDetalleCompra",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "detalledecompra",
+        "Type": "CapaEntidades.detalleCompra",
+        "IsRequired": true
+      },
+      {
+        "Name": "idCompra",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApparelAPI.Controllers.Compras",
+    "Method": "ListarCompras",
+    "RelativePath": "api/Compras/ListarCompras",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Login",
+    "Method": "IniciarSesion",
+    "RelativePath": "api/login/IniciarSesion/IniciarSesion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CapaEntidades.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApparelAPI.Controllers_Productos.Productos",
+    "Method": "Put",
+    "RelativePath": "api/Productos/ActualizarProducto/{CodigoProducto}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "producto",
+        "Type": "CapaEntidades.Producto",
+        "IsRequired": true
+      },
+      {
+        "Name": "CodigoProducto",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApparelAPI.Controllers_Productos.Productos",
+    "Method": "Delete",
+    "RelativePath": "api/Productos/EliminarProducto/{CodigoProducto}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CodigoProducto",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApparelAPI.Controllers_Productos.Productos",
+    "Method": "Post",
+    "RelativePath": "api/Productos/InsertarProducto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "producto",
+        "Type": "CapaEntidades.Producto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApparelAPI.Controllers_Productos.Productos",
+    "Method": "Get",
+    "RelativePath": "api/Productos/ObtenerProductos/{CodigoProducto}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CodigoProducto",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApparelAPI.Controllers_Productos.Productos",
+    "Method": "GetStock",
+    "RelativePath": "api/Productos/ObtenerStockActual/{CodigoProducto}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CodigoProducto",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApparelAPI.Controllers.Usuarios",
+    "Method": "Put",
+    "RelativePath": "api/Usuarios/ActualizarUsuario/{CodUsuario}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CodUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "usuario",
+        "Type": "CapaEntidades.Usuarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApparelAPI.Controllers.Usuarios",
+    "Method": "Post",
+    "RelativePath": "api/Usuarios/Agregar Usuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "CapaEntidades.Usuarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApparelAPI.Controllers.Usuarios",
+    "Method": "Delete",
+    "RelativePath": "api/Usuarios/DarBajaUsuario/{CodUsuario}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CodUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApparelAPI.Controllers.Usuarios",
+    "Method": "Get",
+    "RelativePath": "api/Usuarios/VerUsuario/{CodUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CodUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
