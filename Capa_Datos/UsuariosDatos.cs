@@ -67,7 +67,7 @@ public class UsuariosDatos
         }
     }
 
-    public List <Usuarios> ObtenerUsuarios(int CodUsuario)
+    public List<Usuarios> ObtenerUsuarios(int CodUsuario)
     {
         List<Usuarios> lista = new List<Usuarios>();
         using (SqlConnection conn = new SqlConnection(_connectionString))
@@ -89,8 +89,39 @@ public class UsuariosDatos
                             UsuarioLogin = reader["UsuarioLogin"].ToString()!,
                             Contraseña = reader["Contraseña"].ToString()!,
                             CodRol = Convert.ToInt32(reader["CodRol"]),
-                            Cedula = reader["Cedula"].ToString(),
+                            Cedula = reader["Cedula"].ToString()!,
                             Estado = Convert.ToInt32(reader["estado"])!
+                        });
+                    }
+                }
+            }
+        }
+        return lista;
+    }
+
+    public List<Usuarios> ObtenerTodosUsuarios()
+    {
+        List<Usuarios> lista = new List<Usuarios>();
+        using (SqlConnection conn = new SqlConnection(_connectionString))
+        {
+            using (SqlCommand cmd = new SqlCommand("sp_ObtenerTodosUsuarios", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                conn.Open();
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        lista.Add(new Usuarios
+                        {
+                            CodUsuario = Convert.ToInt32(reader["CodUsuario"]),
+                            Nombre = reader["Nombre"].ToString()!,
+                            Apellidos = reader["Apellidos"].ToString()!,
+                            UsuarioLogin = reader["UsuarioLogin"].ToString()!,
+                            Contraseña = reader["Contraseña"].ToString()!,
+                            CodRol = Convert.ToInt32(reader["CodRol"]),
+                            Cedula = reader["Cedula"].ToString()!,
+                            Estado = Convert.ToInt32(reader["estado"])
                         });
                     }
                 }
@@ -112,16 +143,16 @@ public class UsuariosDatos
                 return true;
             }
         }
-    }   
-    public Usuarios? Login(LoginRequest usuarioLogin)
+    }
+    public Usuarios? Login(string usuarioLogin)
     {
         using (SqlConnection conn = new SqlConnection(_connectionString))
         {
             using (SqlCommand cmd = new SqlCommand("sp_LoginUsuario", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@UsuarioLogin", usuarioLogin.UsuarioLogin);
-                conn.Open();                                                        
+                cmd.Parameters.AddWithValue("@UsuarioLogin", usuarioLogin);
+                conn.Open();
 
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -141,6 +172,6 @@ public class UsuariosDatos
                 }
             }
         }
-        return null; 
+        return null;
     }
 }

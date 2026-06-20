@@ -8,5 +8,6 @@ namespace CapaEntidades
 {
     public class DetalleVenta
     {
+
     }
 }

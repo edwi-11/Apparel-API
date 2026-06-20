@@ -32,3 +32,4 @@ C:\Users\user\Desktop\API APPAREL\ApparelAPI\Capa_Datos\bin\Debug\net8.0\CapaEnt
 C:\Users\user\Desktop\API APPAREL\ApparelAPI\Capa_Datos\obj\Debug\net8.0\Capa_Datos.csproj.Up2Date
 C:\Users\user\Desktop\API APPAREL\ApparelAPI\Capa_Datos\obj\Debug\net8.0\Capa_Datos.genruntimeconfig.cache
 C:\Users\user\Desktop\API APPAREL\ApparelAPI\Capa_Datos\obj\Debug\net8.0\ref\Capa_Datos.dll
+C:\Users\user\Desktop\API APPAREL\ApparelAPI\Capa_Datos\obj\Debug\net8.0\Capa_Datos.sourcelink.json

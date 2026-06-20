@@ -89,7 +89,7 @@
         }
       }
     },
-    "/api/login/IniciarSesion/IniciarSesion": {
+    "/api/login/IniciarSesion": {
       "post": {
         "tags": [
           "Login"
@@ -349,6 +349,18 @@
               "format": "int32"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Usuarios/ObtenerUsuarios": {
+      "get": {
+        "tags": [
+          "Usuarios"
         ],
         "responses": {
           "200": {

@@ -14,7 +14,7 @@ using CapaNegocio;
 
 
 [ApiController]
-[Route("/api/login/IniciarSesion")]
+[Route("/api/login")]
 public class Login : ControllerBase
 {
     private readonly UsuarioNegocio _usuarioNegocio;
@@ -24,7 +24,7 @@ public class Login : ControllerBase
     {
         _config = config;
 
-        _usuarioNegocio = new UsuarioNegocio(config.GetConnectionString("DefaultConnection"));
+        _usuarioNegocio = new UsuarioNegocio(config.GetConnectionString("DefaultConnection")!);
     }
 
 

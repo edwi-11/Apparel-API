@@ -49,7 +49,7 @@
   {
     "ContainingType": "Login",
     "Method": "IniciarSesion",
-    "RelativePath": "api/login/IniciarSesion/IniciarSesion",
+    "RelativePath": "api/login/IniciarSesion",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -198,6 +198,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApparelAPI.Controllers.Usuarios",
+    "Method": "GetTodos",
+    "RelativePath": "api/Usuarios/ObtenerUsuarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

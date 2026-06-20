@@ -20,3 +20,4 @@ C:\Users\user\Desktop\API APPAREL\ApparelAPI\CapaDatos\obj\Debug\net8.0\CapaEnti
 C:\Users\user\Desktop\API APPAREL\ApparelAPI\CapaDatos\obj\Debug\net8.0\refint\CapaEntidades.dll
 C:\Users\user\Desktop\API APPAREL\ApparelAPI\CapaDatos\obj\Debug\net8.0\CapaEntidades.pdb
 C:\Users\user\Desktop\API APPAREL\ApparelAPI\CapaDatos\obj\Debug\net8.0\ref\CapaEntidades.dll
+C:\Users\user\Desktop\API APPAREL\ApparelAPI\CapaDatos\obj\Debug\net8.0\CapaEntidades.sourcelink.json

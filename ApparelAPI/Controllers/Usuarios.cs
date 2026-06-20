@@ -14,7 +14,7 @@ namespace ApparelAPI.Controllers
         private readonly UsuarioNegocio _usuarioNegocio;
         public Usuarios(IConfiguration config)
         {
-            _usuarioNegocio = new UsuarioNegocio(config.GetConnectionString("DefaultConnection"));
+            _usuarioNegocio = new UsuarioNegocio(config.GetConnectionString("DefaultConnection")!);
         }
 
         [Authorize(Roles = "Admin")]
@@ -52,13 +52,15 @@ namespace ApparelAPI.Controllers
             if (string.Equals(usuario.Nombre, "string", StringComparison.OrdinalIgnoreCase) ||
                string.Equals(usuario.Apellidos, "string", StringComparison.OrdinalIgnoreCase) ||
                string.Equals(usuario.UsuarioLogin, "string", StringComparison.OrdinalIgnoreCase) ||
-               string.Equals(usuario.Contraseña, "string", StringComparison.OrdinalIgnoreCase) ||
                usuario.CodRol <= 0 ||
                string.Equals(usuario.Cedula, "string", StringComparison.OrdinalIgnoreCase) ||
                usuario.Estado <= 0)
                 return BadRequest("Por favor llenar todos los campos");
 
             if (usuario == null) return BadRequest("Error, datos invalidos");
+
+            usuario.CodUsuario = CodUsuario;
+
             bool result = _usuarioNegocio.ActualizarUsuario(usuario);
             return result ? Ok("Usuario actualizado correctamente") : StatusCode(500, "Ocurrio un error al actualizar");
         }
@@ -69,10 +71,20 @@ namespace ApparelAPI.Controllers
         {
             if (CodUsuario <= 0) return BadRequest("Codigo invalido");
 
-            if (CodUsuario <= 0) return BadRequest("Codigo invalido");
             var usuarios = _usuarioNegocio.ObtenerUsuario(CodUsuario);
-            return usuarios != null ? Ok(usuarios) : StatusCode(500, "Error al obtener usuarios");
+            return usuarios != null ? Ok(usuarios) : StatusCode(404, "Error al obtener usuarios");
         }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet("ObtenerUsuarios")]
+        public IActionResult GetTodos()
+        {
+            var usuarios = _usuarioNegocio.ObtenerTodosUsuarios();
+            return usuarios != null && usuarios.Count > 0
+                ? Ok(usuarios)
+                : StatusCode(404, "No hay usuarios registrados");
+        }
+
         [Authorize(Roles = "Admin")]
         [HttpDelete("DarBajaUsuario/{CodUsuario}")]
         public IActionResult Delete(int CodUsuario)
@@ -82,6 +94,5 @@ namespace ApparelAPI.Controllers
             return result ? Ok("Usuario eliminado correctamente") : StatusCode(500, "Error al eliminar");
         }
 
-        
     }
 }

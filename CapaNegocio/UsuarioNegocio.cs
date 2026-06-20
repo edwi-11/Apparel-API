@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Capa_Datos;
+using CapaEntidades;
+using CapaNegocio;
+using Konscious.Security.Cryptography;
+using System;
 using System.Security.Cryptography;
 using System.Text;
-using Konscious.Security.Cryptography;
-using Capa_Datos;
-using CapaEntidades;
 
 namespace CapaNegocio
 {
@@ -27,8 +28,7 @@ namespace CapaNegocio
 
         public bool ActualizarUsuario(Usuarios usuario)
         {
-            var loginRequest = new LoginRequest { UsuarioLogin = usuario.UsuarioLogin };
-            var usuarioExistente = _usuarioDatos.Login(loginRequest);
+            var usuarioExistente = _usuarioDatos.Login(usuario.UsuarioLogin);
             if (usuarioExistente == null) return false;
             if (usuario.Contraseña != usuarioExistente.Contraseña)
             {
@@ -45,17 +45,19 @@ namespace CapaNegocio
         {
             return _usuarioDatos.ObtenerUsuarios(codUsuario);
         }
-
+        public List<Usuarios> ObtenerTodosUsuarios()
+        {
+            return _usuarioDatos.ObtenerTodosUsuarios();
+        }
         public Usuarios? Login(string usuarioLogin, string contraseña)
         {
-            var loginRequest = new LoginRequest { UsuarioLogin = usuarioLogin, Contraseña = contraseña };
-            var usuario = _usuarioDatos.Login(loginRequest);
+            var usuario = _usuarioDatos.Login(usuarioLogin);
             if (usuario == null) return null;
 
             // Verificar contraseña
             if (VerificarClave(contraseña, usuario.Contraseña))
-                return usuario; 
-            
+                return usuario;
+
             return null;
         }
 

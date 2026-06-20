@@ -32,3 +32,4 @@ C:\Users\user\Desktop\API APPAREL\ApparelAPI\CapaNegocio\obj\Debug\net8.0\CapaNe
 C:\Users\user\Desktop\API APPAREL\ApparelAPI\CapaNegocio\obj\Debug\net8.0\refint\CapaNegocio.dll
 C:\Users\user\Desktop\API APPAREL\ApparelAPI\CapaNegocio\obj\Debug\net8.0\CapaNegocio.pdb
 C:\Users\user\Desktop\API APPAREL\ApparelAPI\CapaNegocio\obj\Debug\net8.0\ref\CapaNegocio.dll
+C:\Users\user\Desktop\API APPAREL\ApparelAPI\CapaNegocio\obj\Debug\net8.0\CapaNegocio.sourcelink.json
