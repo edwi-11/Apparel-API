@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\ApparelAPI\\ApparelAPI.csproj": {}
+    "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\ApparelAPI\\ApparelAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\ApparelAPI\\ApparelAPI.csproj": {
+    "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\ApparelAPI\\ApparelAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\ApparelAPI\\ApparelAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\ApparelAPI\\ApparelAPI.csproj",
         "projectName": "ApparelAPI",
-        "projectPath": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\ApparelAPI\\ApparelAPI.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\ApparelAPI\\obj\\",
+        "projectPath": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\ApparelAPI\\ApparelAPI.csproj",
+        "packagesPath": "C:\\Users\\Calero Mercado\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\ApparelAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Calero Mercado\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,17 +22,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaDatos\\CapaEntidades.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaDatos\\CapaEntidades.csproj"
+              "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaDatos\\CapaEntidades.csproj": {
+                "projectPath": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaDatos\\CapaEntidades.csproj"
               },
-              "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaNegocio\\CapaNegocio.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaNegocio\\CapaNegocio.csproj"
+              "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaNegocio\\CapaNegocio.csproj": {
+                "projectPath": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaNegocio\\CapaNegocio.csproj"
               }
             }
           }
@@ -50,8 +47,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -95,25 +91,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaDatos\\CapaEntidades.csproj": {
+    "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaDatos\\CapaEntidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaDatos\\CapaEntidades.csproj",
+        "projectUniqueName": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaDatos\\CapaEntidades.csproj",
         "projectName": "CapaEntidades",
-        "projectPath": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaDatos\\CapaEntidades.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaDatos\\obj\\",
+        "projectPath": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaDatos\\CapaEntidades.csproj",
+        "packagesPath": "C:\\Users\\Calero Mercado\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaDatos\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Calero Mercado\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -121,6 +113,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -138,8 +131,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -160,25 +152,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaNegocio\\CapaNegocio.csproj": {
+    "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaNegocio\\CapaNegocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaNegocio\\CapaNegocio.csproj",
+        "projectUniqueName": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaNegocio\\CapaNegocio.csproj",
         "projectName": "CapaNegocio",
-        "projectPath": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaNegocio\\CapaNegocio.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaNegocio\\obj\\",
+        "projectPath": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaNegocio\\CapaNegocio.csproj",
+        "packagesPath": "C:\\Users\\Calero Mercado\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaNegocio\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Calero Mercado\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -186,17 +174,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaDatos\\CapaEntidades.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaDatos\\CapaEntidades.csproj"
+              "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaDatos\\CapaEntidades.csproj": {
+                "projectPath": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaDatos\\CapaEntidades.csproj"
               },
-              "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\Capa_Datos\\Capa_Datos.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\Capa_Datos\\Capa_Datos.csproj"
+              "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\Capa_Datos\\Capa_Datos.csproj": {
+                "projectPath": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\Capa_Datos\\Capa_Datos.csproj"
               }
             }
           }
@@ -210,8 +199,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -242,25 +230,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\Capa_Datos\\Capa_Datos.csproj": {
+    "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\Capa_Datos\\Capa_Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\Capa_Datos\\Capa_Datos.csproj",
+        "projectUniqueName": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\Capa_Datos\\Capa_Datos.csproj",
         "projectName": "Capa_Datos",
-        "projectPath": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\Capa_Datos\\Capa_Datos.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\Capa_Datos\\obj\\",
+        "projectPath": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\Capa_Datos\\Capa_Datos.csproj",
+        "packagesPath": "C:\\Users\\Calero Mercado\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\Capa_Datos\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Calero Mercado\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -268,14 +252,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaDatos\\CapaEntidades.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\API APPAREL\\ApparelAPI\\CapaDatos\\CapaEntidades.csproj"
+              "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaDatos\\CapaEntidades.csproj": {
+                "projectPath": "C:\\Users\\Calero Mercado\\Source\\Repos\\Apparel-API\\CapaDatos\\CapaEntidades.csproj"
               }
             }
           }
@@ -289,8 +274,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -333,7 +317,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1307,7 +1307,7 @@
       "CapaEntidades/1.0.0": {
         "runtime": {
           "CapaEntidades.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -1321,7 +1321,7 @@
         },
         "runtime": {
           "CapaNegocio.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -1334,7 +1334,7 @@
         },
         "runtime": {
           "Capa_Datos.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }

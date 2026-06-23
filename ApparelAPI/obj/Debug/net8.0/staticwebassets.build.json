@@ -1,1 +1,11 @@
-{"Version":1,"Hash":"T4ouNcYm5MN+GK0E7foEdDAFzxgDIgA7hfT06ymTUoc=","Source":"ApparelAPI","BasePath":"_content/ApparelAPI","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "WRR90sPX3Iz56AVmrEfr3Tg/RzfR/dTaQw/7J9t0m6g=",
+  "Source": "ApparelAPI",
+  "BasePath": "_content/ApparelAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

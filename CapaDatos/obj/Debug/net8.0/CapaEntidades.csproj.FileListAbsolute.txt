@@ -21,3 +21,15 @@ C:\Users\user\Desktop\API APPAREL\ApparelAPI\CapaDatos\obj\Debug\net8.0\refint\C
 C:\Users\user\Desktop\API APPAREL\ApparelAPI\CapaDatos\obj\Debug\net8.0\CapaEntidades.pdb
 C:\Users\user\Desktop\API APPAREL\ApparelAPI\CapaDatos\obj\Debug\net8.0\ref\CapaEntidades.dll
 C:\Users\user\Desktop\API APPAREL\ApparelAPI\CapaDatos\obj\Debug\net8.0\CapaEntidades.sourcelink.json
+C:\Users\Calero Mercado\Source\Repos\Apparel-API\CapaDatos\bin\Debug\net8.0\CapaEntidades.deps.json
+C:\Users\Calero Mercado\Source\Repos\Apparel-API\CapaDatos\bin\Debug\net8.0\CapaEntidades.dll
+C:\Users\Calero Mercado\Source\Repos\Apparel-API\CapaDatos\bin\Debug\net8.0\CapaEntidades.pdb
+C:\Users\Calero Mercado\Source\Repos\Apparel-API\CapaDatos\obj\Debug\net8.0\CapaEntidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Calero Mercado\Source\Repos\Apparel-API\CapaDatos\obj\Debug\net8.0\CapaEntidades.AssemblyInfoInputs.cache
+C:\Users\Calero Mercado\Source\Repos\Apparel-API\CapaDatos\obj\Debug\net8.0\CapaEntidades.AssemblyInfo.cs
+C:\Users\Calero Mercado\Source\Repos\Apparel-API\CapaDatos\obj\Debug\net8.0\CapaEntidades.csproj.CoreCompileInputs.cache
+C:\Users\Calero Mercado\Source\Repos\Apparel-API\CapaDatos\obj\Debug\net8.0\CapaEntidades.sourcelink.json
+C:\Users\Calero Mercado\Source\Repos\Apparel-API\CapaDatos\obj\Debug\net8.0\CapaEntidades.dll
+C:\Users\Calero Mercado\Source\Repos\Apparel-API\CapaDatos\obj\Debug\net8.0\refint\CapaEntidades.dll
+C:\Users\Calero Mercado\Source\Repos\Apparel-API\CapaDatos\obj\Debug\net8.0\CapaEntidades.pdb
+C:\Users\Calero Mercado\Source\Repos\Apparel-API\CapaDatos\obj\Debug\net8.0\ref\CapaEntidades.dll
