@@ -18,7 +18,7 @@ namespace ApparelAPI.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpPost("Agregar Usuario")]
+        [HttpPost("AgregarUsuario")]
         public IActionResult Post([FromBody] CapaEntidades.Usuarios usuario)
         {
             if (string.Equals(usuario.Nombre, "string", StringComparison.OrdinalIgnoreCase) ||

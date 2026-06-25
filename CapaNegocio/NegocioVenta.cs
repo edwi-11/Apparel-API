@@ -9,21 +9,24 @@ using System.Xml;
 
 namespace CapaNegocio
 {
- /*   public class NegocioVenta
+    public class VentaBLL
     {
-        private readonly string _cadenaConexion = string.Empty;
+        private readonly VentaDAL _dal;
 
-        public NegocioVenta(string cadenaConexion)
+        public VentaBLL(VentaDAL dal)
         {
-            _cadenaConexion = cadenaConexion;
+            _dal = dal;
         }
 
-        public void InsertarVenta(Ventas venta)
+        public int RegistrarVenta(Ventas venta)
         {
-            if (venta.Detalles == null || !venta.Detalles.Any())
-            {
-                throw new Exception("La venta debe tener al menos un detalle.");
-            }
+            if (venta == null)
+                throw new Exception("Venta inválida");
+
+            if (venta.Detalles == null || venta.Detalles.Count == 0)
+                throw new Exception("Debe agregar productos a la venta");
+
+            return _dal.RegistrarVenta(venta);
         }
-    }*/
+    }
 }

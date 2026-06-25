@@ -12,7 +12,7 @@
           "Microsoft.EntityFrameworkCore": "9.0.9",
           "Microsoft.EntityFrameworkCore.Design": "9.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.9",
-          "Microsoft.EntityFrameworkCore.Tools": "9.0.9"
+          "Microsoft.EntityFrameworkCore.Tools": "10.0.9"
         },
         "runtime": {
           "Capa_Datos.dll": {}
@@ -496,7 +496,7 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/9.0.9": {
+      "Microsoft.EntityFrameworkCore.Tools/10.0.9": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "9.0.9"
         }
@@ -1043,7 +1043,7 @@
       "CapaEntidades/1.0.0": {
         "runtime": {
           "CapaEntidades.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -1203,12 +1203,12 @@
       "path": "microsoft.entityframeworkcore.sqlserver/9.0.9",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.9.0.9.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Tools/9.0.9": {
+    "Microsoft.EntityFrameworkCore.Tools/10.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Q8n1PXXJApa1qX8HI3r/YuHoJ1HuLwjI2hLqaCV9K9pqQhGpi6Z38laOYwL2ElUOTWCxTKMDEMMYWfPlw6rwgg==",
-      "path": "microsoft.entityframeworkcore.tools/9.0.9",
-      "hashPath": "microsoft.entityframeworkcore.tools.9.0.9.nupkg.sha512"
+      "sha512": "sha512-UDdNBGQTXvuenVLHIFAeiSzUydss3Y9ukbDIn08ZX/MrR6CcVqTvh+le+oKIn3XOWKV/YrMWZpjUzO14oVPwMw==",
+      "path": "microsoft.entityframeworkcore.tools/10.0.9",
+      "hashPath": "microsoft.entityframeworkcore.tools.10.0.9.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/9.0.9": {
       "type": "package",

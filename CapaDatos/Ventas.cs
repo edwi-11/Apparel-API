@@ -8,5 +8,8 @@ namespace CapaEntidades
 {
     public class Ventas
     {
+        public int CodCliente { get; set; }
+        public int CodUsuario { get; set; }
+        public List<DetalleVenta> Detalles { get; set; } = new();
     }
 }

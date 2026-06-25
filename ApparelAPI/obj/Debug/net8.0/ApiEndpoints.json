@@ -27,22 +27,6 @@
   },
   {
     "ContainingType": "ApparelAPI.Controllers.ClienteController",
-    "Method": "ObtenerPorId",
-    "RelativePath": "api/Cliente/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ApparelAPI.Controllers.ClienteController",
     "Method": "Actualizar",
     "RelativePath": "api/Cliente/{id}",
     "HttpMethod": "PUT",
@@ -72,6 +56,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApparelAPI.Controllers.ClienteController",
+    "Method": "ObtenerPorTelefono",
+    "RelativePath": "api/Cliente/telefono/{telefono}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "telefono",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -250,7 +250,7 @@
   {
     "ContainingType": "ApparelAPI.Controllers.Usuarios",
     "Method": "Post",
-    "RelativePath": "api/Usuarios/Agregar Usuario",
+    "RelativePath": "api/Usuarios/AgregarUsuario",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -300,6 +300,22 @@
       {
         "Name": "CodUsuario",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApparelAPI.Controllers.VentasController",
+    "Method": "RegistrarVenta",
+    "RelativePath": "api/Ventas/RegistrarVenta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "venta",
+        "Type": "CapaEntidades.Ventas",
         "IsRequired": true
       }
     ],

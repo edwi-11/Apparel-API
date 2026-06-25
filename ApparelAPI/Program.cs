@@ -68,6 +68,10 @@ builder.Services.AddCors(options =>
         policy.WithOrigins(
 
                 "http://127.0.0.1:5502",
+<<<<<<< HEAD
+=======
+                "http://localhost:5502",
+>>>>>>> 86e0e2a (cambios por busqueda clientes)
                 "http://127.0.0.1:5500",
                 "https://white-sand-0fc57e010.7.azurestaticapps.net",
                 "https://www.apparelpos.lat"

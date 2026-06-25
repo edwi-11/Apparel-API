@@ -67,16 +67,20 @@ namespace Capa_Datos
             }
         }
 
-        public List<Cliente> ObtenerClientePorId(int codCliente)
+        public List<Cliente> ObtenerClientePorTelefono(int telefono)
         {
             List<Cliente> clientes = new List<Cliente>();
+
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 using (SqlCommand cmd = new SqlCommand("sp_VerClientePorID", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@CodCliente", codCliente);
+
+                    cmd.Parameters.AddWithValue("@NumeroTelefono", telefono);
+
                     conn.Open();
+
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
@@ -94,6 +98,7 @@ namespace Capa_Datos
                     }
                 }
             }
+
             return clientes;
         }
 

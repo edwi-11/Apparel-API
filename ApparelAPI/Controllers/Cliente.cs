@@ -23,17 +23,16 @@ namespace ApparelAPI.Controllers
             return Ok(clientes);
         }
 
-        // GET: api/Cliente/5
-        [HttpGet("{id}")]
-        public IActionResult ObtenerPorId(int id)
+        [HttpGet("telefono/{telefono}")]
+        public IActionResult ObtenerPorTelefono(int telefono)
         {
-            var clientes = _clienteNegocio.ObtenerClientePorId(id);
+            var clientes = _clienteNegocio.ObtenerClientePorTelefono(telefono);
+
             if (clientes == null || clientes.Count == 0)
                 return NotFound(new { mensaje = "Cliente no encontrado" });
+
             return Ok(clientes[0]);
         }
-
-        // POST: api/Cliente
         [HttpPost]
         public IActionResult Crear([FromBody] Cliente cliente)
         {

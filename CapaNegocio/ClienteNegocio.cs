@@ -18,7 +18,7 @@ namespace CapaNegocio
 
         public bool EliminarCliente(int codCliente) => _clienteDatos.EliminarCliente(codCliente);
 
-        public List<Cliente> ObtenerClientePorId(int codCliente) => _clienteDatos.ObtenerClientePorId(codCliente);
+        public List<Cliente> ObtenerClientePorTelefono(int telefono) => _clienteDatos.ObtenerClientePorTelefono(telefono);
 
         public List<Cliente> ObtenerTodosClientes() => _clienteDatos.ObtenerTodosClientes();
     }
