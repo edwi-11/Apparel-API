@@ -66,8 +66,11 @@ builder.Services.AddCors(options =>
     options.AddPolicy("PermitirApparelFrontend", policy =>
     {
         policy.WithOrigins(
+
+                "http://127.0.0.1:5582",
                 "http://127.0.0.1:5500",
-                "https://white-sand-0fc57e010.7.azurestaticapps.net"
+                "https://white-sand-0fc57e010.7.azurestaticapps.net",
+                "https://www.apparelpos.lat"
               )
               .AllowAnyHeader()
               .AllowAnyMethod();
