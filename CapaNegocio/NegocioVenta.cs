@@ -28,5 +28,10 @@ namespace CapaNegocio
 
             return _dal.RegistrarVenta(venta);
         }
+
+        public List<VentaListado> ListarVentas()
+        {
+            return _dal.ListarVentas();
+        }
     }
 }

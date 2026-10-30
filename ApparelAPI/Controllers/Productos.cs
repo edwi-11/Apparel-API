@@ -18,8 +18,7 @@ namespace ApparelAPI.Controllers_Productos
 
 
         [HttpPost("InsertarProducto")]
-        [Authorize (Roles = "Admin")]
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Post([FromBody] Producto producto)
         {
             if (!User.IsInRole("Admin"))
@@ -27,37 +26,66 @@ namespace ApparelAPI.Controllers_Productos
                 return Forbid("No estás autorizado para usar esta opción");
             }
 
-           if (string.Equals(producto.Nombre, "string", StringComparison.OrdinalIgnoreCase) ||
-               string.Equals(producto.Descripcion, "string", StringComparison.OrdinalIgnoreCase) ||
-               string.Equals(producto.Marca, "string", StringComparison.OrdinalIgnoreCase) ||
-               producto.Precio <= 0 ||
-               producto.Talla <= 0 ||
-               producto.CodCategoria <= 0 ||
-               producto.Estado <= 0)
+            if (producto == null)
+                return BadRequest("Producto inválido");
 
-                return BadRequest("Por favor llenar todos los campos");
+            if (string.IsNullOrWhiteSpace(producto.Nombre) ||
+                string.Equals(producto.Nombre, "string", StringComparison.OrdinalIgnoreCase) ||
 
-            if (producto == null) return BadRequest("Producto invalido");
+                string.IsNullOrWhiteSpace(producto.Descripcion) ||
+                string.Equals(producto.Descripcion, "string", StringComparison.OrdinalIgnoreCase) ||
+
+                string.IsNullOrWhiteSpace(producto.Marca) ||
+                string.Equals(producto.Marca, "string", StringComparison.OrdinalIgnoreCase) ||
+
+                producto.Precio <= 0 ||
+                producto.Estado <= 0 ||
+
+                producto.Stock <= 0)
+            {
+                return BadRequest("Por favor llena todos los campos correctamente.");
+            }
 
             bool result = _Producto.CrearProducto(producto);
-            return result ? Ok("Producto insertado correctamente") : StatusCode(500, "Error al insertar");
+
+            return result
+                ? Ok("Producto insertado correctamente")
+                : StatusCode(500, "Error al insertar el producto.");
         }
 
         [HttpPut("ActualizarProducto/{CodigoProducto}")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Put([FromBody] Producto producto)
         {
-            if (string.Equals(producto.Nombre, "string", StringComparison.OrdinalIgnoreCase) ||
-               string.Equals(producto.Descripcion, "string", StringComparison.OrdinalIgnoreCase) ||
-               string.Equals(producto.Marca, "string", StringComparison.OrdinalIgnoreCase) ||
-               producto.Precio <= 0 ||
-               producto.Talla <= 0 ||
-               producto.CodCategoria <= 0 ||
-               producto.Estado <= 0)
-                return BadRequest("Por favor llenar todos los campos");
+            if (!User.IsInRole("Admin"))
+            {
+                return Forbid("No estás autorizado para usar esta opción");
+            }
 
-            if (producto == null) return BadRequest("Producto invalido");
+            if (producto == null)
+                return BadRequest("Producto inválido");
+
+            if (string.IsNullOrWhiteSpace(producto.Nombre) ||
+                string.Equals(producto.Nombre, "string", StringComparison.OrdinalIgnoreCase) ||
+
+                string.IsNullOrWhiteSpace(producto.Descripcion) ||
+                string.Equals(producto.Descripcion, "string", StringComparison.OrdinalIgnoreCase) ||
+
+                string.IsNullOrWhiteSpace(producto.Marca) ||
+                string.Equals(producto.Marca, "string", StringComparison.OrdinalIgnoreCase) ||
+
+                producto.Talla <= 0 ||
+                producto.Precio <= 0 ||
+                producto.Estado <= 0)
+            {
+                return BadRequest("Por favor llena todos los campos correctamente.");
+            }
+
             bool result = _Producto.ActualizarProducto(producto);
-            return result ? Ok("Producto actualizado correctamente") : StatusCode(500, "Error al actualizar");
+
+            return result
+                ? Ok("Producto actualizado correctamente")
+                : StatusCode(500, "Error al actualizar el producto.");
         }
 
         [HttpGet("ObtenerProductos/{CodigoProducto}")]
@@ -67,6 +95,17 @@ namespace ApparelAPI.Controllers_Productos
             var productos = _Producto.ObtenerProductos(CodigoProducto);
             return productos != null ? Ok(productos) : StatusCode(500, "Error al obtener productos");
         }
+
+        [HttpGet("ObtenerTodosProductos")]
+        public IActionResult GetTodos()
+        {
+            var productos = _Producto.ObtenerTodosProductos();
+            return productos != null && productos.Count > 0
+                ? Ok(productos)
+                : StatusCode(404, "No hay productos registrados");
+        }
+
+        
 
         [HttpGet("ObtenerStockActual/{CodigoProducto}")]
 

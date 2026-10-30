@@ -21,19 +21,35 @@ namespace ApparelAPI.Controllers
             try
             {
                 var id = _bll.RegistrarVenta(venta);
-
-                return Ok(new
-                {
-                    success = true,
-                    codVenta = id
-                });
+                return Ok(new { success = true, codVenta = id });
             }
             catch (Exception ex)
             {
                 return BadRequest(new
                 {
                     success = false,
-                    message = ex.Message
+                    message = ex.Message,
+                    detalle = ex.InnerException?.Message
+                });
+            }
+        }
+
+        // GET api/Ventas/ListarVentas
+        [HttpGet("ListarVentas")]
+        public IActionResult ListarVentas()
+        {
+            try
+            {
+                var ventas = _bll.ListarVentas();
+                return Ok(new { success = true, data = ventas });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new
+                {
+                    success = false,
+                    message = ex.Message,
+                    detalle = ex.InnerException?.Message
                 });
             }
         }

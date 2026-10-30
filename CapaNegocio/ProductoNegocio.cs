@@ -43,5 +43,12 @@ namespace CapaNegocio
         {
             return _datos.ObtenerProductos(CodigoProducto.Value);
         }
+
+        public List<Producto> ObtenerTodosProductos()
+        {
+            return _datos.ObtenerTodosProductos();
+        }
+
+        
     }
 }

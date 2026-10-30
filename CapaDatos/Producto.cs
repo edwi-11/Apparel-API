@@ -19,12 +19,15 @@ namespace CapaEntidades
         public decimal Precio { get; set; }
         [Required(ErrorMessage = "La talla es obligatoria")]
         public int Talla { get; set; }
-        [Required(ErrorMessage = "La cantidad es obligatoria")]
-        public int CodCategoria { get; set; }
         [Required(ErrorMessage = "El estado es obligatorio")]
         public int Estado { get; set; }
+        [Required(ErrorMessage = "El Stock es obligatorio")]
+
+        public int Stock { get; set; }
         [Required(ErrorMessage = "La marca es obligatoria")]
         public string Marca { get; set; } = null!;
+
+        
        
     }
 }

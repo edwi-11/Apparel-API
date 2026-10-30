@@ -1,0 +1,98 @@
+# Fase 4: Casos de Uso con Data Types
+
+## 1. Sistema de Cache Simple
+
+### Contexto
+
+Una aplicacion web necesita reducir la carga en su base de datos almacenando en cache resultados de consultas frecuentes.
+
+### Ejercicio
+
+Implementa un cache para 3 productos con diferentes tiempos de expiracion. Verifica que los datos se eliminan automaticamente.
+
+---
+
+## 2. Contador de Visitas en Tiempo Real
+
+### Contexto
+
+Un sitio web necesita contar visitas a sus paginas en tiempo real sin sobrecargar la base de datos.
+
+
+### Ejercicio
+
+Crea contadores para 3 paginas, incrementa cada uno con diferentes cantidades, y calcula el total de visitas del sitio.
+
+---
+
+## 3. Sesiones de Usuario con Expiracion
+
+### Contexto
+
+Un sistema web necesita gestionar sesiones de usuario que expiren automaticamente despues de un periodo de inactividad.
+
+### Ejercicio
+
+Crea sesiones para 3 usuarios con diferentes tiempos de expiracion. Verifica los TTL y renueva la sesion de uno de ellos.
+
+---
+
+## 4. Sistema de Votos/Likes
+
+### Contexto
+
+Una red social necesita permitir que los usuarios voten por publicaciones, evitando votos duplicados y contando el total.
+
+### Ejercicio
+
+Implementa un sistema de likes para 3 posts. Cada post debe tener al menos 2 likes. Verifica duplicados y cuenta los votos.
+
+---
+
+## 5. Perfiles de Usuario
+
+### Contexto
+
+Una aplicacion necesita almacenar y gestionar perfiles de usuario con multiples atributos que pueden actualizarse individualmente.
+
+### Ejercicio
+
+Crea perfiles para 3 usuarios. Actualiza el email de uno, incrementa la edad de otro, y consulta los campos de todos.
+
+---
+
+## 6. Cola de Mensajes Simple
+
+### Contexto
+
+Una aplicacion de mensajeria necesita implementar una cola donde los mensajes se envien y procesen en orden FIFO (First In, First Out).
+
+### Ejercicio
+
+Implementa una cola de mensajes entre 2 usuarios con 5 mensajes. Procesa los mensajes en orden FIFO y verifica la secuencia.
+
+---
+
+## 7. Sistema de Recomendaciones
+
+### Contexto
+
+Una plataforma necesita recomendar usuarios basandose en intereses comunes usando operaciones de conjuntos.
+
+### Ejercicio
+
+Crea 4 usuarios con diferentes intereses. Encuentra los intereses en comun entre cada par de usuarios.
+
+---
+
+## 8. Rate Limiting por IP
+
+### Contexto
+
+Una API necesita limitar las peticiones por IP para prevenir abusos (maximo 10 peticiones por minuto).
+
+### Ejercicio
+
+Implementa rate limiting para 3 IPs diferentes con diferentes limites (10, 20 y 5 peticiones por minuto). Simula peticiones y verifica los limites.
+
+---

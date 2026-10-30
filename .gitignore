@@ -3,3 +3,8 @@
 **/obj/
 *.user
 *.suo
+
+bin/
+obj/
+
+*.user

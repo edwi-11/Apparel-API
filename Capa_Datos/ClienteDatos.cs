@@ -76,9 +76,7 @@ namespace Capa_Datos
                 using (SqlCommand cmd = new SqlCommand("sp_VerClientePorID", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-
                     cmd.Parameters.AddWithValue("@NumeroTelefono", telefono);
-
                     conn.Open();
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -92,7 +90,7 @@ namespace Capa_Datos
                                 Nombre = reader["Nombre"]?.ToString(),
                                 Apellido = reader["Apellido"]?.ToString(),
                                 NumeroTelefono = reader["NumeroTelefono"] == DBNull.Value ? null : Convert.ToInt32(reader["NumeroTelefono"]),
-                                Cedula = reader["Cedula"]?.ToString()
+                                Cedula = reader["Cedula"]?.ToString(),
                             });
                         }
                     }
@@ -122,7 +120,7 @@ namespace Capa_Datos
                                 Nombre = reader["Nombre"]?.ToString(),
                                 Apellido = reader["Apellido"]?.ToString(),
                                 NumeroTelefono = reader["NumeroTelefono"] == DBNull.Value ? null : Convert.ToInt32(reader["NumeroTelefono"]),
-                                Cedula = reader["Cedula"]?.ToString()
+                                Cedula = reader["Cedula"]?.ToString(),
                             });
                         }
                     }

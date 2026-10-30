@@ -46,7 +46,7 @@ public class Login : ControllerBase
         if (usuario == null) return Unauthorized(new { error = "Credenciales inválidas." });
 
         var token = GenerarToken(usuario);
-        return Ok(new { token });
+        return Ok(new { token, codUsuario = usuario.CodUsuario });
     }
 
     private string GenerarToken(Usuarios usuario)
@@ -62,7 +62,8 @@ public class Login : ControllerBase
         var claims = new[]
         {
         new Claim(ClaimTypes.Name, nombreUsuario),
-        new Claim(ClaimTypes.Role, rolUsuario)
+        new Claim(ClaimTypes.Role, rolUsuario),
+        new Claim("codUsuario", usuario.CodUsuario.ToString())
     };
 
         // Obtener clave secreta desde configuración

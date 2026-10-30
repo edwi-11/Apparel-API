@@ -1,5 +1,5 @@
+using CapaNegocio;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -50,10 +50,14 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
+
         ValidIssuer = builder.Configuration["Jwt:Issuer"],
         ValidAudience = builder.Configuration["Jwt:Audience"],
+
         IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)
+            Encoding.UTF8.GetBytes(
+                builder.Configuration["Jwt:Key"]!
+            )
         )
     };
 });
@@ -65,8 +69,8 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("PermitirApparelFrontend", policy =>
     {
-        policy.WithOrigins(
-
+        policy
+            .WithOrigins(
                 "http://127.0.0.1:5502",
 <<<<<<< HEAD
 =======
@@ -74,16 +78,25 @@ builder.Services.AddCors(options =>
 >>>>>>> 86e0e2a (cambios por busqueda clientes)
                 "http://127.0.0.1:5500",
                 "https://white-sand-0fc57e010.7.azurestaticapps.net",
-                "https://www.apparelpos.lat"
-              )
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+                "https://www.apparelpos.lat",
+                "https://apparelmovilapi-dgdpgjc5gafxfyfp.canadacentral-01.azurewebsites.net"
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     });
 });
 
+// Capa de datos y negocio
+builder.Services.AddScoped<VentaDAL>(provider =>
+    new VentaDAL(
+        builder.Configuration.GetConnectionString("DefaultConnection")!
+    ));
+
+builder.Services.AddScoped<VentaBLL>();
+
 var app = builder.Build();
 
-// Swagger también en Azure
+// Swagger
 app.UseSwagger();
 app.UseSwaggerUI();
 

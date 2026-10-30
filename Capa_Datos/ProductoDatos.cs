@@ -31,8 +31,8 @@ namespace Capa_Datos
                     cmd.Parameters.AddWithValue("@Talla", producto.Talla);
                     cmd.Parameters.AddWithValue("@Marca", producto.Marca);
                     cmd.Parameters.AddWithValue("@Estado", producto.Estado);
-                    cmd.Parameters.AddWithValue("@CodCategoria", producto.CodCategoria);
                     cmd.Parameters.AddWithValue("@Precio", producto.Precio);
+                    cmd.Parameters.AddWithValue("@Stock",producto.Stock);
 
                     conn.Open();
                     int rows = cmd.ExecuteNonQuery();
@@ -55,13 +55,12 @@ namespace Capa_Datos
                     cmd.Parameters.AddWithValue("@Talla", producto.Talla);
                     cmd.Parameters.AddWithValue("@Marca", producto.Marca);
                     cmd.Parameters.AddWithValue("@Estado", producto.Estado);
-                    cmd.Parameters.AddWithValue("@CodCategoria", producto.CodCategoria);
                     cmd.Parameters.AddWithValue("@Precio", producto.Precio);
 
 
                     conn.Open();
                     int rows = cmd.ExecuteNonQuery();
-                    return true;
+                    return rows > 0;
                 }
             }
         }
@@ -127,7 +126,6 @@ namespace Capa_Datos
                                 Talla = Convert.ToInt32(reader["Talla"]),
                                 Marca = reader["Marca"].ToString(),
                                 Estado = Convert.ToInt32(reader["Estado"]),
-                                CodCategoria = Convert.ToInt32(reader["CodCategoria"]),
                                 Precio = Convert.ToDecimal(reader["Precio"])
                             };
                             productos.Add(producto);
@@ -138,7 +136,39 @@ namespace Capa_Datos
             return productos;
         }
 
-     
+        public List<Producto> ObtenerTodosProductos()
+        {
+            List<Producto> productos = new List<Producto>();
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_ObtenerTodosProductos", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            productos.Add(new Producto
+                            {
+                                CodigoProducto = Convert.ToInt32(reader["CodigoProducto"]),
+                                Nombre = reader["Nombre"].ToString(),
+                                Descripcion = reader["Descripcion"].ToString(),
+                                Talla = Convert.ToInt32(reader["Talla"]),
+                                Marca = reader["Marca"].ToString(),
+                                Estado = Convert.ToInt32(reader["Estado"]),
+                                Precio = Convert.ToDecimal(reader["Precio"]),
+                            });
+                        }
+                    }
+                }
+            }
+            return productos;
+        }
+
+        
+
+
     }
 }
 
