@@ -2,6 +2,8 @@ using CapaNegocio;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Capa_Datos.Mongo;            
+using ApparelAPI.Middleware;       
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -72,10 +74,7 @@ builder.Services.AddCors(options =>
         policy
             .WithOrigins(
                 "http://127.0.0.1:5502",
-<<<<<<< HEAD
-=======
                 "http://localhost:5502",
->>>>>>> 86e0e2a (cambios por busqueda clientes)
                 "http://127.0.0.1:5500",
                 "https://white-sand-0fc57e010.7.azurestaticapps.net",
                 "https://www.apparelpos.lat",
@@ -94,7 +93,17 @@ builder.Services.AddScoped<VentaDAL>(provider =>
 
 builder.Services.AddScoped<VentaBLL>();
 
+builder.Services.AddSingleton(new MongoMetricasContext(
+    builder.Configuration["MongoDBSettings:ConnectionString"] ?? string.Empty,
+    builder.Configuration["MongoDBSettings:DatabaseName"] ?? string.Empty));
+
 var app = builder.Build();
+
+var mongo = app.Services.GetRequiredService<MongoMetricasContext>();
+if (!mongo.EstaConfigurado)
+{
+    app.Logger.LogWarning("Logs deshabilitados: {Estado}", mongo.Estado);
+}
 
 // Swagger
 app.UseSwagger();
@@ -105,6 +114,7 @@ app.UseHttpsRedirection();
 app.UseCors("PermitirApparelFrontend");
 
 app.UseAuthentication();
+app.UseMiddleware<RegistroPeticionesMiddleware>();   
 app.UseAuthorization();
 
 app.MapControllers();

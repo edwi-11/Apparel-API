@@ -34,7 +34,7 @@ public class UsuariosDatos
                 cmd.Parameters.AddWithValue("@Estado", usuario.Estado);
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();
-                if (rows <= 0)
+                if (rows == 0)
                 {
                     throw new Exception("No se pudo crear el usuario.");
                 }
